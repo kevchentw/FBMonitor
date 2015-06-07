@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <a class="btn btn-primary" href="{% url "monitor" %}?page=kobeengineer">靠北工程師</a>
+            <a class="btn btn-primary" href="{% url "monitor" %}?page=557872311000387">靠北交大</a>
+            <a class="btn btn-primary" href="{% url "monitor" %}?page=kobedesigner">靠北設計師</a>
+        </div>
+
+    </div>
+    <br>
+    <div class="container">
+
+            {% for id in feed %}
+                <div class="row">
+                <div class="alert alert-success" role="alert">{{ forloop.counter }}</div>
+                <div class="col-md-12">
+                    <div class="fb-post"
+                         data-href="https://www.facebook.com/{{ id.0 }}/posts/{{ id.1 }}"
+                         data-width="500">
+                    </div>
+                </div>
+                <br>
+                </div>
+            {% endfor %}
+
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.2";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+{% endblock %}
