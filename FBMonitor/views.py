@@ -8,7 +8,7 @@ def post_view(request):
 def monitor(request):
     if request.method == "GET":
         d = {}
-        page = request.GET.get('page', '557872311000387')
+        page = request.GET.get('page', '209251989898')
         limit = request.GET.get('limit', '5')
         f = Facebook()
         d['feed'] = f.get_feed_id(f.get_feed(page, limit))
