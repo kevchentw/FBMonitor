@@ -8,6 +8,8 @@ urlpatterns = patterns('',
                        # url(r'^blog/', include('blog.urls')),
                        url(r'^$', TemplateView.as_view(template_name="index.html"), name='home'),
                        url(r'^monitor/', 'FBMonitor.views.monitor', name='monitor'),
+                       url(r'^monitor_all/', 'FBMonitor.views.monitor_all', name='monitor_all'),
+                       url(r'^update/', 'FBMonitor.views.update', name='update'),
                        url(r'^post/', 'FBMonitor.views.post_view', name='post'),
                        url(r'^admin/', include(admin.site.urls)),
                        )

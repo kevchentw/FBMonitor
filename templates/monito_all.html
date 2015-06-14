@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <form action="" method="get">
+                <div class="form-group">
+                    <label for="comments">讚數(>=)</label>
+                    <input type="text" name="likes" value="{{ form.likes }}" class="form-control" id="likes" placeholder="讚數">
+                </div>
+                <div class="form-group">
+                    <label for="comments">評論數量(>=)</label>
+                    <input type="text" name="comments" value="{{ form.comments }}" class="form-control" id="comments" placeholder="評論數量">
+                </div>
+                <div class="form-group">
+                    <label for="shares">分享數量(>=)</label>
+                    <input type="text" name="shares" value="{{ form.shares }}" class="form-control" id="shares" placeholder="分享數量">
+                </div>
+                <div class="form-group">
+                    <label for="shares">顯示數量</label>
+                    <input type="text" name="total" value="{{ form.total }}" class="form-control" id="total" placeholder="顯示數量">
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="order" id="order_time" value="time" {% if form.order == "time" %}checked{% endif %}>
+                        以時間排序
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="order" id="order_likes" value="likes" {% if form.order == "likes" %}checked{% endif %}>
+                        以讚數排序
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="order" id="order_comments" value="comments" {% if form.order == "comments" %}checked{% endif %}>
+                        以評論數排序
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="order" id="order_shares" value="shares" {% if form.order == "shares" %}checked{% endif %}>
+                        以分享數排序
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-default">搜尋</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        {% for f in feed %}
+            <div class="row" style="padding-top: 20px">
+                <div class="alert alert-success" role="alert">{{ forloop.counter }}</div>
+                <div class="col-md-12">
+                    <div class="fb-post"
+                         data-href="https://www.facebook.com/{{ f.page_id }}/posts/{{ f.post_id }}"
+                         data-width="500">
+                    </div>
+                </div>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.2";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+{% endblock %}
