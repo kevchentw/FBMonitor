@@ -103,15 +103,14 @@ class Facebook:
             d += self.get_summary(i)
         FBData.objects.all().delete()
         for i in d:
-            for j in i:
-                data = FBData.objects.create(**i)
-                print(data)
+            data = FBData.objects.create(**i)
+            print(data)
         return d
 
 def test():
     f = Facebook()
     l = f.get_all_summary()
     print(l)
-
+#FBData.objects.all().delete()
 
 # test()

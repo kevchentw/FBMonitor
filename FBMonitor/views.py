@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from FBMonitor.myfacebook import Facebook
 from FBData.models import FBData
+from django.http import HttpResponse
 
 def post_view(request):
     if request.method == "GET":
@@ -19,7 +20,7 @@ def monitor(request):
 def monitor_all(request):
     if request.method == "GET":
         order = request.GET.get('order', "time")
-        total = request.GET.get('total', 50)
+        total = request.GET.get('total', 10)
         likes = request.GET.get('likes', 0)
         comments = request.GET.get('comments', 0)
         shares = request.GET.get('shares', 0)
@@ -36,7 +37,9 @@ def monitor_all(request):
             likes = int(likes)
             comments = int(comments)
         except:
-            total = likes = comments = 0
+            total = 0
+            likes = 0
+            comments = 0
         form = {"order": order, "total": total, "likes": likes, "comments": comments, "shares": shares}
         d = {}
         feed = FBData.objects.filter(likes__gte=likes, comments__gte=comments, shares__gte=shares).order_by("-"+order)[:total]
@@ -49,4 +52,5 @@ def monitor_all(request):
 def update(request):
     if request.method == "GET":
         f = Facebook()
-        f.get_all_summary()
+        f.get_all_summary()	
+        return redirect("/monitor_all/")
