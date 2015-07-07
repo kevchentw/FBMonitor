@@ -36,7 +36,6 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'FBData'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -92,3 +91,8 @@ TEMPLATE_DIRS = (
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+#MangoDB Config
+DB_USERNAME = "mongoadmin"
+DB_PASSWORD = "db4536"
+DB_ADDRESS = "220.132.97.119:37017"
