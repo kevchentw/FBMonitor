@@ -70,18 +70,20 @@
     </div>
 </div>
 <div class="container">
-    {% for id in feed %}
+    {% for post in posts %}
+    <br>
     <div class="row">
-        <div class="alert alert-success" role="alert">{{ forloop.counter }}</div>
-        <div class="col-md-12">
-            <div class="fb-post" data-href="https://www.facebook.com/{{ id.0 }}/posts/{{ id.1 }}" data-width="500">
-            </div>
-        </div>
-        <br>
-    </div>
-    {% endfor %} {{filter}}
+                <div class="alert alert-success" role="alert">{{ forloop.counter }}</div>
+                <div class="col-md-12">
+                    <div class="fb-post"
+                         data-href="https://www.facebook.com/{{ post.0 }}/posts/{{ post.1 }}"
+                         data-width="500">
+                    </div>
+                </div>
+                <br>
+                </div>
+    {% endfor %}
 </div>
-
 
 <div id="fb-root"></div>
 <script>
