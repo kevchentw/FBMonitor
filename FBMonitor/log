@@ -101,3 +101,47 @@ DEBUG:__main__:Connect to DB: fb_rawdata
 DEBUG:__main__:Connect to Table: posts
 DEBUG:__main__:Start Querying
 DEBUG:__main__:Querying Time: 0.0003409385681152344s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.00044918060302734375s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0003750324249267578s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0003120899200439453s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0002999305725097656s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0002880096435546875s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0003459453582763672s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.00031304359436035156s
