@@ -31,3 +31,73 @@ DEBUG:__main__:Connect to Table: posts
 DEBUG:__main__:Connect to MangoDB: Success!
 DEBUG:__main__:Connect to DB: test_kaogaau
 DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.00049591064453125s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.00040411949157714844s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0003399848937988281s
+DEBUG:__main__:Connect to MangoDB: Success!
+DEBUG:__main__:Connect to DB: fb_rawdata
+DEBUG:__main__:Connect to Table: posts
+DEBUG:__main__:Start Querying
+DEBUG:__main__:Querying Time: 0.0003409385681152344s

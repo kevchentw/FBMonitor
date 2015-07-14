@@ -1,9 +1,15 @@
-from pymongo import MongoClient
+from pymongo import MongoClient, ASCENDING, DESCENDING
 import settings
 import logging
+import time
 logging.basicConfig(filename="log",level=logging.DEBUG)
 logger = logging.getLogger( __name__ )
-
+DB_LIKES_COUNT = "doc.likes.summary.total_count"
+DB_SHARES_COUNT = "doc.shares.count"
+DB_COMMENTS_COUNT = "doc.comments.summary.total_count"
+DB_POST_TIME = "post_time"
+DB_LAST_UPDATED = 'last_updated'
+DB_NO_SHARE = {"doc.shares.count" : { '$exists': False }}
 class MongoDB:
     def __init__(self):
         self.connect()
@@ -23,15 +29,48 @@ class MongoDB:
             logger.debug("Connect to Table: " + table_name)
         else:
             logger.debug("Connect to Table without choosing DB")
-    def filter(self):
+    def order(self, order_by):
+        key = ['time', 'likes', 'comments', 'shares']
+
+
+    def filter(self, d):
+        # query:
+        #     until_datetime: 2015/07/14
+        #     since_datetime: 2015/07/07
+        #     comments: 0
+        #     shares: 0
+        #     likes: 0
+        #     order: time/likes/comments/shares
+        #     total: 10
+        t = time.time()
         q = {}
         if self.table:
-            q = self.table.find_one()
-        return q
+            logger.debug("Start Querying")
+            q = self.table.find(
+                {"$and":[
+                    {DB_LIKES_COUNT: {"$gte": d['likes']}},
+                    {DB_COMMENTS_COUNT: {"$gte": d['comments']}},
+                    {DB_SHARES_COUNT: {"$gte": d['shares']}}
+                ]}
+            )
+            q.sort(DB_LIKES_COUNT,DESCENDING)
+            q.limit(d['total'])
+            logger.debug("Querying Time: %ss"\
+            % (time.time()-t))
+            return q
+        else:
+            logger.debug("Querying Without a Table")
+            return None
 def test():
     mongodb = MongoDB()
-    mongodb.connect_db("test_kaogaau")
+    mongodb.connect_db("fb_rawdata")
     mongodb.connect_table("posts")
-    tmp = mongodb.filter()
-    print(tmp)
-test()
+    d = {}
+    d['comments'] = 10
+    d['shares'] = 10
+    d['likes'] = 10
+    d['total'] = 10
+    tmp = mongodb.filter(f)
+    for t in tmp:
+        print(t)
+# test()
